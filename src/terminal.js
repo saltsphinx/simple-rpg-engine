@@ -1,0 +1,28 @@
+import parser from "./parser";
+import parserObjectInterface from "./parserObjectInterface";
+
+export default function terminal(input, data, commandList) {
+  if (!(typeof data === "object"))
+    throw new Error("Object not passed for data");
+  if (!(typeof commandList === "object"))
+    throw new Error("Object not passed for commandList");
+
+  let parserObj;
+  switch (typeof input) {
+    case "string":
+      parserObj = parser(input);
+      break;
+    default:
+      parserObjectInterface(input);
+      parserObj = input;
+      break;
+  }
+
+  const command = commandList[parserObj.command];
+  if (command) {
+    command(parserObj, data, terminal, commandList);
+    return true;
+  }
+
+  return false;
+}
