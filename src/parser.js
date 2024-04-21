@@ -1,7 +1,7 @@
-export default function parser(commandStr) {
-  if (!(typeof commandStr == "string"))
+export default function parser(input) {
+  if (!(typeof input == "string"))
     throw new Error("Parser requires string as first paramenter");
-  const origin = commandStr.trim().replace(/\s{2,}/, " ");
+  const origin = input.trim().replace(/\s{2,}/, " ");
   const args = origin.split(" ");
   const command = args.shift();
   const tail = args.join(" ");
