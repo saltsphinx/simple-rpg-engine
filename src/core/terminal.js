@@ -1,5 +1,5 @@
-import parser from "./parser";
-import parserObjectInterface from "./parserObjectInterface";
+import parser from "./parser.js";
+import parserObjectInterface from "./parserObjectInterface.js";
 
 export default function terminal(input, data, commandList) {
   if (!(typeof data === "object"))
