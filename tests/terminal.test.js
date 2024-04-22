@@ -10,3 +10,9 @@ test("It calls command from given input", () => {
   expect(result).toBeTruthy();
   expect(mockCommand.mock.calls).toHaveLength(1);
 });
+
+test("It returns false when command isn't found", () => {
+  const input = "l here";
+
+  expect(terminal(input, {}, {})).toBeFalsy();
+});
