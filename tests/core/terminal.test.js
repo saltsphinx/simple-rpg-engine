@@ -1,4 +1,4 @@
-import terminal from "../src/core/terminal.js";
+import terminal from "../../src/core/terminal.js";
 
 test("It calls command from given input", () => {
   const input = "l here";
