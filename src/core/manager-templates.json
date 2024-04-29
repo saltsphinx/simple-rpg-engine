@@ -1,0 +1,32 @@
+{
+  "initial": {
+    "data": {
+      "player": {
+        "name": "annie",
+        "location": ""
+      }
+    },
+    "world": {
+      "name": "luckweall",
+      "description": "a patchwork hellscape, caught between the throes of fever dream and waking reality. it's denizens, cut from a similar substance as luckweall, are bound by the visions of the clockwork deity, hecklecroft, to abide the Hierarchy.",
+      "rooms": {
+        "testRoom01": {
+          "name": "the experience floor",
+          "description": "where the beginning and the end happens",
+          "travelTable": {
+            "out": { "id": "testRoom02" }
+          }
+        },
+        "testRoom02": {
+          "name": "test room",
+          "description": ""
+        }
+      }
+    }
+  },
+  "setup": {
+    "incidenceList": {},
+    "location": {},
+    "playerStats": {}
+  }
+}
