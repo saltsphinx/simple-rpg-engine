@@ -1,4 +1,4 @@
-import parser from "../src/core/parser.js";
+import parser from "../../src/core/parser.js";
 
 test("Returns object with parsed command parts", () => {
   const input = "l inside chest";
