@@ -19,9 +19,14 @@ function quitCommand(parserObj, data) {
   if (/y/i.test(prompt())) data.playing = false;
 }
 
+function commandsCommand(parserObj) {
+  Object.keys(commandList).forEach((val, i) => console.log(i + ". " + val));
+}
+
 const commandList = {
   l: lookCommand,
   quit: quitCommand,
+  commands: commandsCommand,
 };
 
 function game() {

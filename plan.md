@@ -17,3 +17,15 @@ as mentioned before, the terminal will just be a function. it takes a string, pa
 
 for data, maybe some event driven/observer design would fit best? with commands and other systems having access to a caller object, and pass a string of the events name and data as params? Idk yet
 
+apr 28 2023
+there should be some centralized functions/operations. for example saving, attacking, picking up things and removing from inventory, changing rooms, printing info to the screen, throwing errors
+
+how will the game be loaded? what will the architecture look like?
+there will be a scaffolding with default information, initial room states, npc info and location, item stats, character info and
+other things that the dev can create and fill out. there will be the main object containing all other ones. there will be an object containing scaffolding/initial/static data. there will be an object with data to be serialized. there will be an object containing current session state(idk how to say this). session info will be made up of initial and serialize info, with the two deconstructed into an object.
+Data should be relatively flat. For example, the player's inventory should be an array of item id's just the item objects themselves. Or a room's NPCs list should be NPC ids.
+
+main
+  initial
+  serialize
+  session
