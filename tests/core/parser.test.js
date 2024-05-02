@@ -6,6 +6,7 @@ test("Returns object with parsed head parts", () => {
     head: "l",
     origin: input,
     tail: "inside chest",
+    full: ["l", "inside", "chest"],
     parts: ["inside", "chest"],
   };
 
@@ -17,6 +18,7 @@ test("Returns parsed head when padding is added on sides", () => {
   const expectedObj = {
     head: "buy",
     origin: "buy apple from keeper",
+    full: ["buy", "apple", "from", "keeper"],
     tail: "apple from keeper",
     parts: ["apple", "from", "keeper"],
   };
@@ -30,6 +32,7 @@ test("Returns parsed head when padding is between arguments", () => {
     head: "open",
     origin: "open north",
     tail: "north",
+    full: ["open", "north"],
     parts: ["north"],
   };
 
@@ -42,6 +45,7 @@ test("Returns object with empty strings when head is empty and no arguments", ()
     head: "",
     origin: "",
     tail: "",
+    full: [""],
     parts: [],
   };
 
