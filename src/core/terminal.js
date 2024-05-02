@@ -18,7 +18,7 @@ export default function terminal(input, data, commandList) {
       break;
   }
 
-  const command = commandList[parserObj.command];
+  const command = commandList[parserObj.head];
   if (command) {
     command(parserObj, data, terminal, commandList);
     return true;
